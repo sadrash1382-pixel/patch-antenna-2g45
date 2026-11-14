@@ -1,0 +1,16 @@
+# CST: Ergebnis- und Cache-Ordner (groß, reproduzierbar)
+simulation/**/Result/
+simulation/**/Model/
+simulation/**/ModelCache/
+simulation/**/Temp/
+*.lok
+# Altium
+History/
+__Previews/
+*.PcbDocPreview
+*.SchDocPreview
+Project Logs for */
+Project Outputs for */
+# Python
+__pycache__/
+*.pyc
