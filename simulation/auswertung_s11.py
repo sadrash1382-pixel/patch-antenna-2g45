@@ -48,7 +48,8 @@ def main():
     ink, muted, grid = "#0b0b0b", "#52514e", "#e6e8eb"
     sweep = [l for l in laeufe if l[0]["L"] == laeufe[-1][0]["L"]]
     start = [l for l in laeufe if l[0]["L"] != laeufe[-1][0]["L"]]
-    blau = plt.get_cmap("Blues")(np.linspace(0.35, 0.95, len(sweep)))
+    blau = (plt.get_cmap("Blues")(np.linspace(0.35, 0.95, len(sweep))) if len(sweep) > 1
+            else ["#2a78d6"])
 
     fig, ax = plt.subplots(figsize=(7.5, 4.4), dpi=150)
     for par, f, s, _ in start:
@@ -62,8 +63,10 @@ def main():
     ax.set_xlim(2.2, 2.7)
     ax.set_xlabel("Frequenz [GHz]", color=ink)
     ax.set_ylabel("|S11| [dB]", color=ink)
-    ax.set_title(f"S11 über Inset-Tiefe y0 (L = {sweep[0][0]['L']:g} mm, CST-Simulation)",
-                 color=ink, fontsize=10, loc="left")
+    p0 = sweep[0][0]
+    titel = (f"S11 über Inset-Tiefe y0 (L = {p0['L']:g} mm, CST-Simulation)" if len(sweep) > 1
+             else f"S11 final: L = {p0['L']:g} mm, y0 = {p0['y0']:g} mm (CST-Simulation)")
+    ax.set_title(titel, color=ink, fontsize=10, loc="left")
     ax.grid(True, color=grid, lw=0.8)
     ax.set_axisbelow(True)
     for sp in ("top", "right"):

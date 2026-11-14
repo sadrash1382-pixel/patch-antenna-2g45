@@ -37,8 +37,8 @@ Abweichungen zwischen Rechnung, Simulation und Messung werden deutlich sichtbar.
 | Inset-Tiefe $y_0$ | 10,7 mm | **8,5 mm** |
 | Leitungsbreite (50 Ω) | 3,08 mm | 3,08 mm |
 | Resonanzfrequenz | 2,45 GHz (Soll) | 2,45 GHz |
-| $S_{11}$ bei Resonanz | – | −37 dB |
-| Bandbreite ($S_{11}$ < −10 dB) | – | ≈ 70 MHz |
+| $S_{11}$ bei Resonanz | – | −36,9 dB (51 Ω) |
+| Bandbreite ($S_{11}$ < −10 dB) | – | 73 MHz (2,414 … 2,487 GHz) |
 | Richtwirkung | – | 6,8 dBi |
 | Strahlungswirkungsgrad | – | 39 % (−4,1 dB) |
 | Gewinn | – | ≈ 2,7 dBi |

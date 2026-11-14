@@ -34,9 +34,12 @@ Auswertung: [`simulation/auswertung_s11.py`](../simulation/auswertung_s11.py)
 | 4 | 28,45 mm | 10 mm | 2,449 GHz | −16,1 dB | 37 Ω | 54 MHz |
 | 5 | 28,45 mm | 11 mm | 2,444 GHz | −10,5 dB | 27 Ω | 18 MHz |
 | 6 | 28,45 mm | 12 mm | 2,436 GHz | −6,7 dB | 18 Ω | – |
-| **7 (final)** | **28,5 mm** | **8,5 mm** | **≈ 2,45 GHz** | **≈ −37 dB** | ≈ 50 Ω | ≈ 70 MHz |
+| **7 (final)** | **28,5 mm** | **8,5 mm** | **2,450 GHz** | **−36,9 dB** | **51,0 + j0,8 Ω** | **73 MHz** (2,414 … 2,487 GHz) |
 
-Lauf 7 ist aus dem CST-Plot abgelesen, der Datenexport dazu fehlt noch.
+Daten Lauf 7: [`simulation/results/s11_final.txt`](../simulation/results/s11_final.txt).
+CST-Projekt: [`simulation/Antenne.cst`](../simulation/Antenne.cst) (nur Modell und Einstellungen; die Ergebnisse entstehen beim erneuten Rechnen).
+
+![S11 final](../simulation/results/s11_final.png)
 
 ![S11 über Inset-Tiefe](img/s11_sweep_y0.png)
 
@@ -70,7 +73,7 @@ durch Fehlanpassung geht also nichts verloren.
    Feintuning braucht die Feldsimulation.
 2. **FR-4 kostet über die Hälfte der Leistung.** Nur 39 % werden abgestrahlt, der Rest
    wird im Substrat zu Wärme. Die Verluste verbreitern zugleich die Resonanz.
-3. **Die Bandbreite ist kleiner als die Materialunsicherheit.** ≈ 70 MHz Bandbreite
+3. **Die Bandbreite ist kleiner als die Materialunsicherheit.** 73 MHz Bandbreite
    stehen einer Unsicherheit von $\varepsilon_r$ gegenüber, die die Resonanz um
    etwa ± 50 MHz verschieben kann. Für die Fertigung sind deshalb mehrere Varianten
    mit leicht unterschiedlicher Länge geplant.
